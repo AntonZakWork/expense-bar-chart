@@ -7,7 +7,7 @@ const App = () => {
   console.log(sortedData);
   const heightCalculator = (el) => {
     let height = (el.amount / sortedData[0].amount) * 100;
-    if (height > 90) height = 90; 
+    if (height > 90) height = 90;
     if (height < 10) height = 10; // to prevent too large/too small bar sizes
     if (el.day === sortedData[0].day) {
       return { height: `${height}%`, backgroundColor: 'rgb(118, 181, 188)' };
