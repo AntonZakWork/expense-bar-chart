@@ -7,7 +7,8 @@ const App = () => {
   console.log(sortedData);
   const heightCalculator = (el) => {
     let height = (el.amount / sortedData[0].amount) * 100;
-    if (height < 10) height = 10; //to prevent bar from being excessively small
+    if (height > 90) height = 90;
+    if (height < 10) height = 10;
     if (el.day === sortedData[0].day) {
       return { height: `${height}%`, backgroundColor: 'rgb(118, 181, 188)' };
     } else return { height: `${height}%` };
@@ -52,7 +53,7 @@ const App = () => {
               <div className="chartInfo">
                 <div className="monthSpending">
                   <div>Total this month</div>
-                  <h3>$13.37</h3>
+                  <h3>$478.33</h3>
                 </div>
                 <div className="monthPercent">
                   <div>
